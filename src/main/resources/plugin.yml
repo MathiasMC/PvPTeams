@@ -1,0 +1,11 @@
+main: me.MathiasMC.PvPTeams.PvPTeams
+version: 1.0.0
+name: PvPTeams
+author: MathiasMC
+api-version: 1.13
+commands:
+  pvpteams:
+    description: PvPTeams main command
+    aliases: [team]
+  pvpmenu:
+    description: PvPMenu gui
