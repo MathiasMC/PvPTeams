@@ -1,0 +1,299 @@
+#                                         #
+#                PvPTeams                 #
+#                   by                    #
+#                MathiasMC                #
+#  Any ideas for the plugin or need help? #
+#           contact me on spigot          #
+#                                         #
+player:
+  pvpteams:
+    command:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      unknown:
+        - '&7[&aPvPTeams&7] &cUnknown sub command &f{pvpteams_command}'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &aPvPTeams created by &eMathiasMC'
+        - '&7&l> &aVersion: &e{pvpteams_version}'
+        - '&7&l> &f/pvpteams help for list of commands'
+        - '&7&l> &2Any ideas for the plugin or need help?'
+        - '&7&l> &2Contact me on spigot'
+        - '&c&m---------------------------------------------'
+    help:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &f/pvpteams reload'
+        - '&7&l> &f/pvpteams save'
+        - '&7&l> &f/pvpteams create <teamName>'
+        - '&7&l> &f/pvpteams delete'
+        - '&7&l> &f/pvpteams invite <player>'
+        - '&7&l> &f/pvpteams kick <player>'
+        - '&7&l> &f/pvpteams accept'
+        - '&7&l> &f/pvpteams gui open <fileName> <player>'
+        - '&7&l> &f/pvpteams message <player> <text>'
+        - '&7&l> &f/pvpteams quest <quest> add <amount> <player>'
+        - '&7&l> &f/pvpteams member/coins/teamcoins add/remove/set <amount> <player>'
+        - '&c&m---------------------------------------------'
+    save:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      saved:
+        - '&7[&aPvPTeams&7] &aSaved cached data to the database!'
+    reload:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      reloaded:
+        - '&7[&aPvPTeams&7] &aReloaded all configs!'
+    create:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams create <teamName>'
+      already:
+        - '&7[&aPvPTeams&7] &cYou already have a team'
+      member:
+        - '&7[&aPvPTeams&7] &cYou cannot create a team you are already in the team {pvpteams_team}'
+      taken:
+        - '&7[&aPvPTeams&7] &cThat team name is already taken!'
+      name:
+        - '&7[&aPvPTeams&7] &cThe team name can only contain a-z'
+      created:
+        - '&7[&aPvPTeams&7] &eCreated team &f{pvpteams_team}'
+    delete:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams delete'
+      no-team:
+        - '&7[&aPvPTeams&7] &cYou dont have a team!'
+      member:
+        - '&7[&aPvPTeams&7] &cYour team owner has deleted your team!'
+      owner:
+        - '&7[&aPvPTeams&7] &cOnly the owner of the team can delete your team'
+      deleted:
+        - '&7[&aPvPTeams&7] &cDeleted your team &f{pvpteams_team}&c!'
+    invite:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams invite <player>'
+      online:
+        - '&7[&aPvPTeams&7] &cThat player is not online!'
+      team:
+        - '&7[&aPvPTeams&7] &cYou dont have a team!'
+      already-team:
+        - '&7[&aPvPTeams&7] &cThat player is already in a team'
+      only:
+        - '&7[&aPvPTeams&7] &cOnly the owner of the team can invite!'
+      player:
+        - '&7[&aPvPTeams&7] &cThat player is already in your team!'
+      already:
+        - '&7[&aPvPTeams&7] &cThat player has a invite already try again soon...'
+      dont:
+        - '&7[&aPvPTeams&7] &eThe invite for the team &f{pvpteams_team} &ehas expired
+        you didn''t accept the invite'
+      invited:
+        - '&7[&aPvPTeams&7] &eYou have got an invite to join &f{pvpteams_team} &e/pvpteams
+        accept'
+      invited-owner:
+        - '&7[&aPvPTeams&7] &eYou have invited &f{pvpteams_team_player} &eto your team
+        &f{pvpteams_team}'
+    accept:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams accept'
+      team:
+        - '&7[&aPvPTeams&7] &cYou are already in a team!'
+      invite:
+        - '&7[&aPvPTeams&7] &cYou dont have any invites!'
+      accepted:
+        - '&7[&aPvPTeams&7] &eYou are now a member of &f{pvpteams_team}'
+      accepted-owner:
+        - '&7[&aPvPTeams&7] &f{pvpteams_team_player} &eis now a member of your team'
+    kick:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams kick <player>'
+      team:
+        - '&7[&aPvPTeams&7] &cYou dont have a team!'
+      only:
+        - '&7[&aPvPTeams&7] &cOnly the owner of the team can kick!'
+      player:
+        - '&7[&aPvPTeams&7] &cYou dont have that player in your team!'
+      kicked-member:
+        - '&7[&aPvPTeams&7] &cYou have been kicked by the team owner!'
+      kicked-owner:
+        - '&7[&aPvPTeams&7] &cYou have kicked &f{pvpteams_team_player}'
+    gui:
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams gui open'
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      open:
+        permission:
+          - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+        usage:
+          - '&7[&aPvPTeams&7] &cUsage: /pvpteams gui open <fileName> <player>'
+        online:
+          - '&7[&aPvPTeams&7] &cThat player is not online!'
+        found:
+          - '&7[&aPvPTeams&7] &cThe file {pvpteams_gui_file} is not found'
+    quest:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams quest <quest> add'
+      find:
+        - '&7[&aPvPTeams&7] &cCannot find that quest!'
+      add:
+        usage:
+          - '&7[&aPvPTeams&7] &cUsage: /pvpteams quest <quest> add <amount> <player>'
+        online:
+          - '&7[&aPvPTeams&7] &cThat player is not online!'
+        team:
+          - '&7[&aPvPTeams&7] &cThe player does not have a team!'
+        number:
+          - '&7[&aPvPTeams&7] &cNot a number!'
+        message:
+          - '&7[&aPvPTeams&7] &eYou have added &a{pvpteams_quest_add} &eto team &a{pvpteams_team}'
+    message:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams message <player> <text>'
+      online:
+        - '&7[&aPvPTeams&7] &cThat player is not online!'
+    add-remove-set:
+      permission:
+        - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams member/coins/teamcoins add/remove/set
+        <amount> <player>'
+      online:
+        - '&7[&aPvPTeams&7] &cThat player is not online!'
+      number:
+        - '&7[&aPvPTeams&7] &cNot a number!'
+      team:
+        - '&7[&aPvPTeams&7] &cThe target does not have a team!'
+      '0':
+        - '&7[&aPvPTeams&7] &cCannot be under 0!'
+      members:
+        - '&7[&aPvPTeams&7] &e{pvpteams_team} members is now at {pvpteams_members}'
+      teamcoins:
+        - '&7[&aPvPTeams&7] &e{pvpteams_team} teamcoins is now at {pvpteams_teamcoins}'
+      coins:
+        - '&7[&aPvPTeams&7] &e{pvpteams_player} coins is now at {pvpteams_coins}'
+  pvpmenu:
+    permission:
+      - '&7[&aPvPTeams&7] &cYou dont have access to use this command!'
+    commands:
+      - pvpteams gui open menu.yml {pvpteams_player}
+    usage:
+      - '&7[&aPvPTeams&7] &cUsage: /pvpmenu <player>'
+    online:
+      - '&7[&aPvPTeams&7] &cThat player is not online!'
+console:
+  pvpteams:
+    command:
+      unknown:
+        - '&7[&aPvPTeams&7] &cUnknown sub command &f{pvpteams_command}'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &aPvPTeams created by &eMathiasMC'
+        - '&7&l> &aVersion: &e{pvpteams_version}'
+        - '&7&l> &f/pvpteams help for list of commands'
+        - '&7&l> &2Any ideas for the plugin or need help?'
+        - '&7&l> &2Contact me on spigot'
+        - '&c&m---------------------------------------------'
+    help:
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &f/pvpteams reload'
+        - '&7&l> &f/pvpteams save'
+        - '&7&l> &f/pvpteams gui open <fileName> <player>'
+        - '&7&l> &f/pvpteams message <player> <text>'
+        - '&7&l> &f/pvpteams quest <quest> add <amount> <player>'
+        - '&7&l> &f/pvpteams member/coins/teamcoins add/remove/set <amount> <player>'
+        - '&c&m---------------------------------------------'
+    save:
+      saved:
+        - '&7[&aPvPTeams&7] &aSaved cached data to the database!'
+    reload:
+      reloaded:
+        - '&7[&aPvPTeams&7] &aReloaded all configs!'
+    create:
+      usage:
+        - '&7[&aPvPTeams&7] &cYou cannot create a team as console'
+    delete:
+      usage:
+        - '&7[&aPvPTeams&7] &cYou cannot delete a team as console'
+    invite:
+      usage:
+        - '&7[&aPvPTeams&7] &cYou cannot invite as console'
+    accept:
+      usage:
+        - '&7[&aPvPTeams&7] &cYou cannot accept as console'
+    kick:
+      usage:
+        - '&7[&aPvPTeams&7] &cYou cannot kick as console'
+    gui:
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams gui open'
+      open:
+        usage:
+          - '&7[&aPvPTeams&7] &cUsage: /pvpteams gui open <fileName> <player>'
+        online:
+          - '&7[&aPvPTeams&7] &cThat player is not online!'
+        found:
+          - '&7[&aPvPTeams&7] &cThe file {pvpteams_gui_file} is not found'
+    quest:
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams quest <quest> add'
+      find:
+        - '&7[&aPvPTeams&7] &cCannot find that quest!'
+      add:
+        usage:
+          - '&7[&aPvPTeams&7] &cUsage: /pvpteams quest <quest> add <amount> <player>'
+        online:
+          - '&7[&aPvPTeams&7] &cThat player is not online!'
+        team:
+          - '&7[&aPvPTeams&7] &cThe player does not have a team!'
+        number:
+          - '&7[&aPvPTeams&7] &cNot a number!'
+        message:
+          - '&7[&aPvPTeams&7] &eYou have added &a{pvpteams_quest_add} &eto team &a{pvpteams_team}'
+    message:
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams message <player> <text>'
+      online:
+        - '&7[&aPvPTeams&7] &cThat player is not online!'
+    add-remove-set:
+      usage:
+        - '&7[&aPvPTeams&7] &cUsage: /pvpteams member/coins/teamcoins add/remove/set
+        <amount> <player>'
+      online:
+        - '&7[&aPvPTeams&7] &cThat player is not online!'
+      number:
+        - '&7[&aPvPTeams&7] &cNot a number!'
+      team:
+        - '&7[&aPvPTeams&7] &cThe target does not have a team!'
+      '0':
+        - '&7[&aPvPTeams&7] &cCannot be under 0!'
+      members:
+        - '&7[&aPvPTeams&7] &eYour team {pvpteams_team} members is now at {pvpteams_members}'
+      teamcoins:
+        - '&7[&aPvPTeams&7] &eYour team {pvpteams_team} teamcoins is now at {pvpteams_teamcoins}'
+      coins:
+        - '&7[&aPvPTeams&7] &eYou now have {pvpteams_coins} coins'
+  pvpmenu:
+    usage:
+      - '&7[&aPvPTeams&7] &cUsage: /pvpmenu <player>'
+    commands:
+      - pvpteams gui open menu.yml {pvpteams_player}
+    online:
+      - '&7[&aPvPTeams&7] &cThat player is not online!'

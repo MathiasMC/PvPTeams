@@ -1,0 +1,32 @@
+settings:
+  name: '&f&lShop Level 0'
+  size: 54
+  team:
+    require-team: true
+    no-team:
+      - '&7[&aPvPTeams&7] &cYou cannot use this you dont have a team!'
+    required-level:
+      - '&7[&aPvPTeams&7] &cYour team is not the required level to use this!'
+back:
+  NAME: '&6&lBack to shop menu'
+  LORES: []
+  MATERIAL: '340:0'
+  AMOUNT: 1
+  POSITION: 45
+  OPTIONS:
+    - GLOW
+  COMMANDS:
+    - pvpteams gui open shop.yml {pvpteams_player}
+dirt:
+  NAME: '&6&lDirt'
+  LORES:
+    - '&6Cost &a10'
+  MATERIAL: '3:0'
+  AMOUNT: 1
+  POSITION: 10
+  SHOP:
+    COST: 10
+    ENOUGH:
+      - '&7[&aPvPTeams&7] &cYou dont have enough coins to buy that!'
+    COMMANDS:
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &eBuy dirt

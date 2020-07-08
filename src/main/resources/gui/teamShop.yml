@@ -1,0 +1,41 @@
+settings:
+  name: '&f&lTeam Shops'
+  size: 54
+  team:
+    require-team: true
+    no-team:
+      - '&7[&aPvPTeams&7] &cYou cannot use this you dont have a team!'
+    required-level:
+      - '&7[&aPvPTeams&7] &cYour team is not the required level to use this!'
+back:
+  NAME: '&6&lBack to team menu'
+  LORES: []
+  MATERIAL: BOOK
+  AMOUNT: 1
+  POSITION: 45
+  OPTIONS:
+    - GLOW
+  COMMANDS:
+    - pvpteams gui open menu.yml {pvpteams_player}
+shop0:
+  NAME: '&6&lStarter Shop'
+  LORES:
+    - '&aRequire team level 0'
+  MATERIAL: BEACON
+  AMOUNT: 1
+  POSITION: 11
+  OPTIONS:
+    - GLOW
+  COMMANDS:
+    - pvpteams gui open teamShop0.yml {pvpteams_player}
+shop1:
+  NAME: '&6&lBetter Shop'
+  LORES:
+    - '&aRequire team level 1'
+  MATERIAL: BEACON
+  AMOUNT: 1
+  POSITION: 13
+  OPTIONS:
+    - GLOW
+  COMMANDS:
+    - pvpteams gui open teamShop1.yml {pvpteams_player}

@@ -1,5 +1,6 @@
 package me.MathiasMC.PvPTeams;
 
+import com.google.common.io.ByteStreams;
 import me.MathiasMC.PvPTeams.commands.PvPMenu_Command;
 import me.MathiasMC.PvPTeams.commands.PvPTeams_Command;
 import me.MathiasMC.PvPTeams.data.Database;
@@ -17,6 +18,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -114,6 +118,14 @@ public class PvPTeams extends JavaPlugin {
             return false;
         }
         return true;
+    }
+
+    public void copy(String filename, File file) {
+        try {
+            ByteStreams.copy(getResource(filename), new FileOutputStream(file));
+        } catch (IOException exception) {
+            textUtils.exception(exception.getStackTrace(), exception.getMessage());
+        }
     }
 
     public boolean versionID() {

@@ -1,0 +1,83 @@
+#                                         #
+#                PvPTeams                 #
+#                   by                    #
+#                MathiasMC                #
+#  Any ideas for the plugin or need help? #
+#           contact me on spigot          #
+#                                         #
+debug:
+  database: false
+mysql:
+  use: false
+  host: localhost
+  port: 3306
+  database: database
+  username: username
+  password: password
+levels:
+  '1':
+    - blockbreak_iron_ore_1
+    - blockbreak_coal_ore_1
+    - location_1
+  '2':
+    - blockbreak_iron_ore_2
+    - blockbreak_coal_ore_2
+    - location_2
+  '3':
+    - blockbreak_diamond_ore_3
+    - location_3
+placeholders:
+  quests_question:
+    'yes': '&2Yes'
+    'no': '&cNo'
+quests:
+  blockbreak_iron_ore_1:
+    amount: 25
+    prefix: '&6Iron Ore &a{pvpteams_quests_current} &6out of &a{pvpteams_quests_value}'
+  blockbreak_coal_ore_1:
+    amount: 25
+    prefix: '&6Coal Ore &a{pvpteams_quests_current} &6out of &a{pvpteams_quests_value}'
+  blockbreak_iron_ore_2:
+    amount: 50
+    prefix: '&6Iron Ore &a{pvpteams_quests_current} &6out of &a{pvpteams_quests_value}'
+  blockbreak_coal_ore_2:
+    amount: 50
+    prefix: '&6Coal Ore &a{pvpteams_quests_current} &6out of &a{pvpteams_quests_value}'
+  blockbreak_diamond_ore_3:
+    amount: 10
+    prefix: '&6Diamond Ore &a{pvpteams_quests_current} &6out of &a{pvpteams_quests_value}'
+  location_1:
+    amount: 1
+    prefix: '&6Location &a{pvpteams_quests_question}'
+  location_2:
+    amount: 1
+    prefix: '&6Location &a{pvpteams_quests_question}'
+  location_3:
+    amount: 1
+    prefix: '&6Location &a{pvpteams_quests_question}'
+levelup:
+  level:
+    '1':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &eYour team is now level
+        {pvpteams_level}
+    '2':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &eYour team is now level
+        {pvpteams_level}
+    '3':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &eYour team is now level
+        {pvpteams_level}
+  requirements:
+    '1':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &cYou don't have the required
+        requirements!
+    '2':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &cYou don't have the required
+        requirements!
+    '3':
+      - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &cYou don't have the required
+        requirements!
+  max:
+    - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &cYour team is at max level!
+  error:
+    - pvpteams message {pvpteams_player} &7[&aPvPTeams&7] &cSomething went wrong try
+      again later...

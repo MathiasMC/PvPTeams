@@ -1,7 +1,9 @@
 main: me.MathiasMC.PvPTeams.PvPTeams
-version: 1.0.0
-name: PvPTeams
+version: ${project.version}
+name: ${project.name}
 author: MathiasMC
+description: ${project.description}
+website: spigotmc.org/resources/pvpteams.80970
 api-version: 1.13
 commands:
   pvpteams:

@@ -1,0 +1,91 @@
+settings:
+  name: '&f&lPvPTeams Menu'
+  size: 54
+  team:
+    require-team: true
+    no-team:
+      - '&7[&aPvPTeams&7] &cYou cannot use this you dont have a team!'
+    required-level:
+      - '&7[&aPvPTeams&7] &cYour team is not the required level to use this!'
+teamInfo:
+  NAME: '&6&lTeam Info'
+  LORES:
+    - '&6Name: &f{pvpteams_team}'
+    - '&6Owner: &f{pvpteams_team_owner}'
+    - '&6Max Members: &f{pvpteams_team_members_max}'
+    - '&6Level: &f&a{pvpteams_team_level}'
+  MATERIAL: BOOK
+  AMOUNT: 1
+  POSITION: 13
+  OPTIONS:
+    - GLOW
+teamMembers:
+  NAME: '&6&lMembers'
+  LORES:
+    - '&f{pvpteams_team_members}'
+  MATERIAL: DIAMOND_SWORD
+  AMOUNT: 1
+  POSITION: 24
+  OPTIONS:
+    - GLOW
+teamCoins:
+  NAME: '&6&lTeam Coins'
+  LORES:
+    - '&f{pvpteams_team_coins}'
+    - ''
+    - '&6&lYour coins'
+    - '&f{pvpteams_coins}'
+  MATERIAL: SUNFLOWER
+  AMOUNT: 1
+  POSITION: 20
+  OPTIONS:
+    - GLOW
+teamLimitations:
+  NAME: '&6&lLimitations'
+  LORES:
+    - '&6Members: &a{pvpteams_team_members_size} &6out of &a{pvpteams_team_members_max}'
+  MATERIAL: ANVIL
+  AMOUNT: 1
+  POSITION: 16
+  OPTIONS:
+    - GLOW
+none:
+  NAME: '&6&lNone'
+  LORES: []
+  MATERIAL: ANVIL
+  AMOUNT: 1
+  POSITION: 10
+  OPTIONS:
+    - GLOW
+TeamLevel:
+  NAME: '&6&lRequirement to level &a{pvpteams_team_level_next}'
+  LORES:
+    - '{pvpteams_team_level_quests}'
+  MATERIAL: NETHER_STAR
+  AMOUNT: 1
+  POSITION: 40
+  OPTIONS:
+    - GLOW
+    - TEAMLEVEL
+Shop:
+  NAME: '&6&lShops'
+  LORES: []
+  MATERIAL: BEACON
+  AMOUNT: 1
+  POSITION: 37
+  OPTIONS:
+    - GLOW
+    - CLOSE
+  COMMANDS:
+    - pvpteams gui open shop.yml {pvpteams_player}
+TeamShop:
+  NAME: '&6&lTeam Shops'
+  LORES: []
+  MATERIAL: BEACON
+  AMOUNT: 1
+  POSITION: 43
+  OPTIONS:
+    - GLOW
+    - CLOSE
+  COMMANDS:
+    - pvpteams gui open teamShop.yml {pvpteams_player}
